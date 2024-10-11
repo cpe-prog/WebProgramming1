@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button
+			onclick="red()"
+			style="
+				background-color: red;
+				height: 50px;
+				width: 50px;
+				border-radius: 25px;
+			"
+		></button>
+		<button
+			onclick="yellow()"
+			style="
+				background-color: yellow;
+				height: 50px;
+				width: 50px;
+				border-radius: 25px;
+			"
+		></button>
+		<button
+			onclick="pink()"
+			style="
+				background-color: pink;
+				height: 50px;
+				width: 50px;
+				border-radius: 25px;
+			"
+		></button>
+		<button
+			onclick="blue()"
+			style="
+				background-color: blue;
+				height: 50px;
+				width: 50px;
+				border-radius: 25px;
+			"
+		></button>
+
+		<button
+			style="height: 50px; width: 50px; border-radius: 25px"
+			onclick="clear()"
+		></button>
+
+		<div style="height: 500px; width: 500px; border: 1px solid" id="box"></div>
+	</body>
+	<script>
+		let changingColor = document.getElementById("box");
+		function red() {
+			changingColor.style.backgroundColor = "red";
+		}
+
+		function yellow() {
+			changingColor.style.backgroundColor = "yellow";
+		}
+		changingColor.addEventListener("submit", (e) => {
+			e.preventDefault();
+		});
+
+		function pink() {
+			changingColor.style.backgroundColor = "pink";
+		}
+
+		function blue() {
+			changingColor.style.backgroundColor = "blue";
+		}
+
+		function clear() {
+			changingColor.style.backgroundColor = "red";
+		}
+	</script>
+</html>
